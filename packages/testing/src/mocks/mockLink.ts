@@ -42,9 +42,8 @@ export class MockLink extends ApolloLink {
   }
 
   public addMockedResponse(mockedResponse: MockedResponse) {
-    const normalizedMockedResponse = this.normalizeMockedResponse(
-      mockedResponse
-    );
+    const normalizedMockedResponse = mockedResponse;
+    
     const key = requestToKey(
       normalizedMockedResponse.request,
       this.addTypename
